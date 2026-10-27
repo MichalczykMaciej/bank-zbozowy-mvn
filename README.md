@@ -8,12 +8,3 @@ java.lang.AssertionError: PIN 1525 powinien zostać zaakceptowany expected:<true
 	at put.io.selenium.atm.AtmCardInfoTest.testTryPinCorrect(AtmCardInfoTest.java:33)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 
-
-Co dokładnie zawiodło? Zawiodła faza uruchamiania testów. 
-Pobieranie narzędzi powiodło się, kod poprawnie się skompilował, 
-ale proces zatrzymał się na testach, 
-co zapobiegło zbudowaniu wadliwego artefaktu w fazie pakowania.   
-Dlaczego poprawna składniowo zmiana spowodowała błąd? 
-Ponieważ CI weryfikuje nie tylko to, czy kod został poprawnie napisany pod kątem języka Java, 
-ale przede wszystkim sprawdza, czy działa zgodnie z zaprogramowaną logiką biznesową. 
-Zmiana PIN-u naruszyła reguły, które testy miały za zadanie chronić.
